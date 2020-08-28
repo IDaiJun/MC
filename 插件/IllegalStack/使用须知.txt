@@ -1,0 +1,4 @@
+下载最新插件请前往原贴: https://www.spigotmc.org/resources/44411/
+
+1、messages.yml文件我对版本（v2.1.9b）进行了中文翻译和显示优化。
+2、config-中文参考.yml是来自于: https://www.mcbbs.net/thread-849068-1-1.html，对版本（v2.1.9b）只有旧字段适用，新加入字段不适用

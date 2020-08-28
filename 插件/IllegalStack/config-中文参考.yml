@@ -1,0 +1,199 @@
+ConfigVersion: '2.0'
+Exploits:
+  Other:
+    #阻止摧毁末地传送门
+    PreventEndPortalDestruction: true
+    #防止使用漏斗在区块边界运输以复制物品（全版本）
+    PreventHoppersToUnloadedChunks: true
+    #禁止玩家在床上时输入指令
+    PreventCommandsInBed: true
+    #防止盒中盒
+    PreventNestedShulkers: true
+    #阻止鞘翅无限飞行
+    PreventInvalidElytraFlight: true
+    #禁止给生物装上箱子
+    DisableChestsOnMobs: true
+    #禁止玩家使用生存模式无法获得的药水
+    PreventInvalidPotions: true
+    #修复0刻刷物品漏洞
+    PreventZeroTickExploit: true
+    #防止复制铁轨
+    PreventRailDupe: true
+    #修复交换物品刷物品漏洞
+    PreventItemSwapLagExploit: true
+    #禁止摧毁基岩
+    PreventBedrockDestruction: true
+  NetherPortal:
+    #禁止玩家卡地狱门
+    PreventPortalTrap: true
+  OverStack:
+    #禁止漏斗中超过堆叠上限的物品
+    PreventOverStackedItemInHoppers: true
+    GroupStack: []
+    #堆叠白名单模式
+    StackWhiteListMode: true
+    #是否将超过堆叠上限的物品数修复为堆叠上限
+    FixOverstackedItemInstead: false
+    #删除的物品类型
+    RemoveItemsOfType: []
+    #是否删除超过堆叠上限的物品
+    RemoveOverstackedItems: true
+    #允许堆叠的物品
+    AllowStack:
+    - POTION
+  Enchants:
+    #修复非法附魔
+    FixIllegalEnchants: false
+    #是否允许跳过检测
+    AllowBypass: false
+    #是否删除无法破坏标志
+    RemoveUnbreakableFlag: false
+    #只在特定世界内生效
+    OnlyFunctionInWorlds: []
+    #自定义附魔白名单
+    CustomEnchantOverride: []
+    #可附魔物品白名单
+    EnchantedItemWhitelist: []
+    #是否删除自定义属性
+    RemoveCustomAttributes: false
+  1_15_Exploits:
+    Dupes:
+      #阻止刷拌线钩并用于刷绿宝石
+      PreventTripwireDupe: true
+  Fishing:
+    #踢出自动钓鱼的玩家
+    KickForAutoClickerFishing: true
+  Looting:
+    #阻止副手抢夺附魔的物品的附魔效果生效
+    PreventLootingExploit: true
+  PortalDupe:
+    #可进入末地传送门的生物白名单
+    EndWhiteList: []
+    #可进入地狱传送门的生物白名单
+    NetherWhiteList: []
+    #末地传送门白名单模式
+    EndWhiteListMode: true
+    #禁止玩家之外的生物进入地狱传送门
+    BlockNonPlayersInNetherPortal: true
+    #禁止玩家之外的生物进入末地传送门
+    BlockNonPlayersInEndPortal: true
+    #是否提醒玩家
+    NotifyBlockedPortalAttempts: false
+    #地狱传送门白名单模式
+    NetherWhiteListMode: true
+  1_14_Exploits:
+    Traders:
+      #禁止村民无限交易
+      BlockVillagerTradeCheesing: true
+      VillagerRestockTime: 10
+      #僵尸村民治愈几率
+      ZombieVillagerTransformChance: 100
+  MineCart:
+    #修复矿车漏洞
+    PreventMinecartGlitch: true
+    #是否删除卡入方块的矿车
+    RemoveExistingGlitchedMinecarts: false
+    MinecartBlockWhiteList: []
+  TNTDupe:
+    #阻止复制TNT
+    PreventIndirectTNTPowerDupe: true
+  #书的漏洞  
+  BookExploit:
+    ValidCharset: US-ASCII
+    LimitNumberOfPages: 0
+    PageCountThreshold: 5
+    #是否禁止写书
+    DisableBookWriting: false
+    #作者白名单
+    BookAuthorWhitelist: []
+    #是否删除不匹配字符集的书
+    RemoveBooksNotMatchingCharset: true
+  EndGateway:
+    #防止末地折跃门崩服
+    PreventEndGatewayCrashExploit: true
+  SignExploit:
+    #是否在区块加载时摧毁可能导致崩服的告示牌
+    DestroyBadSignsOnChunkLoad: false
+  Nether:
+    ExcludeNetherWorldFromHeightCheck: []
+    #禁止玩家到达地狱最高高度
+    BlockPlayersAboveNether: true
+    #地狱最高高度
+    NetherYLevel: 128
+  #自动钓鱼检测  
+  FishMod:
+    #是否警告玩家而非提醒玩家
+    WarnPlayerThenKickInsteadOfNotify: false
+    #踢出前允许钓几条鱼
+    MaxFishAllowedBeforeKick: 5
+    #是否检测自动钓鱼Mod
+    WatchForAutoFishMod: true
+    MaxFishToNotifyStaffThenBlock: 5
+  DropperDupe:
+    #修复漏斗复制物品的漏洞
+    BlockLoopedDroppers: true
+  3rdParty:
+    #修复CMI堆叠潜影盒的漏洞
+    BlockCMIShulkerStacking: true
+  RNGEnchant:
+    #阻止玩家通过漏洞直接在附魔台看到想要的附魔
+    PreventRNGEnchant: true
+  Teleport:
+    #禁止玩家使用末影珍珠穿过玻璃
+    PearlPhasing: true
+#用户提出要修复的漏洞    
+UserRequested:
+  Obscure:
+    HackedShulker:
+      #摧毁无效的潜影盒
+      DestroyInvalidShulkers: false
+      #在玩家登录时检测可疑的潜影盒
+      CheckGroundForBadShulkerAtLogin: false
+    HopperCheck:
+      #忽略所有漏斗检测
+      IgnoreAllHopperChecks: false 
+    BlockBadItemsFromCreativeTab: false
+  Obsure:
+    Misc:
+      #删除所有改过名的物品
+      RemoveAllRenamedItems: false
+  ItemRemoval:
+    #删除匹配名称的物品
+    RemoveItemsMatchingName: false
+    #匹配名称的物品无法被修复
+    BlockRepairsInstead: false
+    #要删除的物品名
+    ItemNamesToRemove: []
+    #是否禁止附魔
+    BlockEnchantingInstead: false
+    #要删除的lore
+    ItemLoresToRemove: []
+    #高度匹配模式
+    NameLoreStrictMatchMode: false
+  Mobs:
+    #阻止僵尸捡起物品
+    PreventZombieItemPickup: false
+  Misc:
+    NotifyInsteadOfBlock: []
+  Cobble:
+    #禁止刷石机
+    PreventCobbleGenerators: false
+Exploit:
+  Teleport:
+    CorrectionNotify: false
+  #卡服机器  
+  LagMachines:
+    #末影水晶
+    End Crystal: true
+    #盔甲架
+    ArmorStand: true
+Misc:
+  #提醒附近玩家
+  NotifyNearbyPlayers: false
+  #直接摧毁机器而不掉落物品
+  BreakMachinesInsteadOfDroppingItems: true
+  #物品扫描间隔
+  ItemScanTimer: 10
+  DisableInWorlds: []
+  LogOffensesInSeparateFile: true
+  InGameOffenseNotifications: true
